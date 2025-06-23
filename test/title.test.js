@@ -22,6 +22,7 @@ describe("example.com", () => {
     if (!browser) {
       browser = await puppeteer.launch({
         // executablePath: "/opt/google/chrome/google-chrome",
+        args: ["--no-sandbox", "--disable-setuid-sandbox"],
       });
     }
     if (!page) {
